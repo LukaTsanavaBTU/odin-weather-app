@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Odin Weather</title>
+  <script defer src="main.js"></script></head>
+  <body>
+    <main>
+      <div class="info">
+        <div class="header-info">
+          <div><span class="infospan" id="address"></span></div>
+          <div><span class="infospan" id="description"></span></div>
+        </div>
+        <div class="main-info">
+          <img id="icon" />
+          <div class="temperature-wrapper">
+            <div><span class="infospan" id="conditions"></span></div>
+            <div>
+              <span class="infospan" id="temp"></span
+              ><span class="measurement-temp"></span>
+            </div>
+            <div>
+              Feels Like: <span class="infospan" id="feelslike"></span
+              ><span class="measurement-temp"></span>
+            </div>
+          </div>
+        </div>
+        <div class="secondary-info">
+          <div>
+            <img src="ccc91abc59845e8bf28c.png" alt="" />
+            <div>Sunrise: <span class="infospan" id="sunrise"></span></div>
+          </div>
+          <div>
+            <img src="77276b05a1dec5a8a720.png" alt="" />
+            <div>Sunset: <span class="infospan" id="sunset"></span></div>
+          </div>
+          <div>
+            <img src="ecccc8ee2406c33d2f64.png" alt="" />
+            <div>
+              Windspeed: <span class="infospan" id="windspeed"></span
+              ><span class="measurement-speed"></span>
+            </div>
+          </div>
+          <div>
+            <img src="9cf9c7477316f22519b1.png" alt="" />
+            <div>Humidity: <span class="infospan" id="humidity"></span></div>
+          </div>
+        </div>
+      </div>
+      <div class="search">
+        <div class="searchbar-wrapper">
+          <input id="location-input" name="location" type="text" placeholder="Enter your location" />
+          <input type="image" src="89b828b5f944e6d54a5b.png">
+        </div>
+        <div class="checkbox-wrapper">
+          <label for="us">Imperial Measurements:</label>
+          <input type="checkbox" name="us" id="us" />
+        </div>
+        <div class="error hidden">
+          Information Could Not Be Fetched, Check Your Spelling And Try Again
+        </div>
+      </div>
+      <div class="load-cover hidden">
+        <img src="ac7410d5addc4a837122.png" alt="">
+      </div>
+    </main>
+  </body>
+</html>
