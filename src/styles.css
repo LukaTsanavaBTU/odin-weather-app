@@ -1,0 +1,81 @@
+:root {
+  --system-font: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: var(--system-font);
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222831;
+  color: #eeeeee;
+}
+
+main {
+    width: 400px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.header-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#address {
+  font-size: 2rem;
+}
+
+#description {
+    font-size: 1.2rem;
+}
+
+.main-info {
+  display: flex;
+  gap: 50px;
+}
+
+#icon {
+  width: 200px;
+}
+
+.temperature-wrapper {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+}
+
+#conditions {
+  font-size: 1.5rem;
+}
+
+#temp {
+  font-size: 3rem;
+}
+
+#temp + .measurement {
+  font-size: 3rem;
+}
+
+#feelslike {
+  font-size: 1.2rem;
+}
+
+#feelslike + .measurement {
+  font-size: 1.2rem;
+}
+
+.secondary-info {
+    display: grid;
+    grid-template-columns: auto auto;
+    font-size: 1.2rem;
+}

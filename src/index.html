@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Odin Weather</title>
+  </head>
+  <body>
+    <main>
+      <div class="info">
+        <div class="header-info">
+          <div><span class="infospan" id="address"></span></div>
+          <div><span class="infospan" id="description"></span></div>
+        </div>
+        <div class="main-info">
+          <img id="icon" />
+          <div class="temperature-wrapper">
+            <div><span class="infospan" id="conditions"></span></div>
+            <div><span class="infospan" id="temp"></span><span class="measurement"></span></div>
+            <div>Feels Like: <span class="infospan" id="feelslike"></span><span class="measurement"></span></div>
+          </div>
+        </div>
+        <div class="secondary-info">
+          <div>Sunrise: <span class="infospan" id="sunrise"></span></div>
+          <div>Sunset: <span class="infospan" id="sunset"></span></div>
+          <div>Windspeed: <span class="infospan" id="windspeed"></span></div>
+          <div>Humidity: <span class="infospan" id="humidity"></span></div>
+        </div>
+      </div>
+      <div class="input">
+        <div>
+          <label for="location-input">Enter your location:</label>
+          <input id="location-input" name="location" type="text" />
+        </div>
+        <div>
+          <label for="us">Imperial:</label>
+          <input type="checkbox" name="us" id="us" />
+        </div>
+        <div>
+          <button>Search</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
