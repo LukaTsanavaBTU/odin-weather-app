@@ -41,7 +41,6 @@ const getData = async function (location, unitGroup = "metric") {
 
 const displayInfo = async function (location, unitGroup = "metric") {
   const data = await getData(location, unitGroup);
-  console.log(data);
   const icon = document.querySelector("#icon");
   const infoSpans = document.querySelectorAll(".infospan");
   const tempMeasurementSpans = document.querySelectorAll(".measurement-temp");
@@ -59,10 +58,18 @@ const displayInfo = async function (location, unitGroup = "metric") {
 
 const locationInput = document.querySelector("#location-input");
 const imperialCheckbox = document.querySelector("#us");
-const searchButton = document.querySelector("button");
+const searchButton = document.querySelector('input[type="image"]');
 
 searchButton.addEventListener("click", () => {
   const location = locationInput.value;
   const imperial = imperialCheckbox.checked ? "us" : "metric";
   displayInfo(location, imperial);
 });
+
+locationInput.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    searchButton.click();
+  }
+});
+
+displayInfo("oslo", "metric");
