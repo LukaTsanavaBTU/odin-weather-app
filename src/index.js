@@ -44,13 +44,15 @@ const displayInfo = async function (location, unitGroup = "metric") {
   console.log(data);
   const icon = document.querySelector("#icon");
   const infoSpans = document.querySelectorAll(".infospan");
-  const measurementSpans = document.querySelectorAll(".measurement");
+  const tempMeasurementSpans = document.querySelectorAll(".measurement-temp");
+  const speedMeasurementSpan = document.querySelector(".measurement-speed");
   infoSpans.forEach((span) => {
     const id = span.getAttribute("id");
     span.textContent = data[id];
-    measurementSpans.forEach((span) => {
+    tempMeasurementSpans.forEach((span) => {
       span.textContent = unitGroup === "us" ? "°F" : "°C";
     });
+    speedMeasurementSpan.textContent = unitGroup === "us" ? "m/hr" : "km/hr";
     icon.setAttribute("src", require(`./icons/${data.icon}.svg`));
   });
 };

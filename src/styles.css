@@ -17,6 +17,9 @@ body {
 
 main {
     width: 400px;
+    border-radius: 5px;
+    padding: 50px;
+    background-color: #393e4665;
 }
 
 .info {
@@ -62,7 +65,7 @@ main {
   font-size: 3rem;
 }
 
-#temp + .measurement {
+#temp + .measurement-temp {
   font-size: 3rem;
 }
 
@@ -70,12 +73,25 @@ main {
   font-size: 1.2rem;
 }
 
-#feelslike + .measurement {
+#feelslike + .measurement-temp {
   font-size: 1.2rem;
 }
 
 .secondary-info {
     display: grid;
     grid-template-columns: auto auto;
+    gap: 20px;
     font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.secondary-info > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.secondary-info img {
+    width: 50px;
 }
